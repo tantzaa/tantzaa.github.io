@@ -3,12 +3,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    .architects-daughter-regular {
-        font-family: "Architects Daughter", cursive;
-        font-weight: 400;
-        font-style: normal;
-      }
+    background-color: rgb(194, 218, 194); 
 }
+
+.architects-daughter-regular {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 .header{
     background-image: url(metsä.jpg);
@@ -19,10 +21,38 @@ html, body {
 .header h1{
     font-size: 60px;
     text-align: center;
-    color: darkgreen;
+    color: white;
     padding: 100px 10px 100px 10px;
     margin: 0px;
 }
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: darkgreen;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(99, 154, 99);
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
 
 .content{
     width: 90%;
@@ -32,15 +62,17 @@ html, body {
 }
 
 .content img{
-    width: 50%;
-    padding: 20px 0px 20px 0px;
+    width: 100%;
 }
 
 .column {
     float: left;
     width: 50%;
   }
-  
+.column form {
+    margin-top: 18px;
+}
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
@@ -48,12 +80,9 @@ html, body {
     clear: both;
   }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 450px) {
     .content {
         width: 75%;
-    }
-    body {
-       background-color: rgb(194, 218, 194); 
     }
     .header h1{
         padding: 200px 10px 200px 10px;
@@ -63,9 +92,6 @@ html, body {
 @media only screen and (min-width: 1025px) {
     .content {
         width: 55%;
-    }
-    body {
-       background-color: rgb(194, 218, 194); 
     }
     .header h1{
         font-size: 70px;
