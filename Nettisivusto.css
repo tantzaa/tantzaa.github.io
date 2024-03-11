@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    .architects-daughter-regular {
+        font-family: "Architects Daughter", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+.header{
+    background-image: url(metsä.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header h1{
+    font-size: 60px;
+    text-align: center;
+    color: darkgreen;
+    padding: 100px 10px 100px 10px;
+    margin: 0px;
+}
+
+.content{
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    color: darkgreen;
+}
+
+.content img{
+    width: 50%;
+    padding: 20px 0px 20px 0px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@media only screen and (min-width: 650px) {
+    .content {
+        width: 75%;
+    }
+    body {
+       background-color: rgb(194, 218, 194); 
+    }
+    .header h1{
+        padding: 200px 10px 200px 10px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .content {
+        width: 55%;
+    }
+    body {
+       background-color: rgb(194, 218, 194); 
+    }
+    .header h1{
+        font-size: 70px;
+        padding: 200px 10px 200px 10px;
+    }
+
+    .column {
+        float: left;
+        width: 45%;
+        padding-right: 5%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+}
