@@ -80,6 +80,16 @@ section img{
     clear: both;
   }
 
+footer {
+  background-color: darkgreen;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
 @media only screen and (min-width: 450px) {
     section {
         width: 75%;
