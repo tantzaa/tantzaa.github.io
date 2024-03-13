@@ -12,13 +12,13 @@ html, body {
     font-style: normal;
   }
 
-.header{
+header{
     background-image: url(metsä.jpg);
     background-position: center;
     background-size: cover;
 }
 
-.header h1{
+header h1{
     font-size: 60px;
     text-align: center;
     color: white;
@@ -54,14 +54,14 @@ html, body {
     color: white;
   }
 
-.content{
+section {
     width: 90%;
     margin: auto;
     font-size: 18px;
     color: darkgreen;
 }
 
-.content img{
+section img{
     width: 100%;
 }
 
@@ -81,19 +81,19 @@ html, body {
   }
 
 @media only screen and (min-width: 450px) {
-    .content {
+    section {
         width: 75%;
     }
-    .header h1{
+    header h1{
         padding: 200px 10px 200px 10px;
     }
 }
 
 @media only screen and (min-width: 1025px) {
-    .content {
+    section {
         width: 55%;
     }
-    .header h1{
+    header h1{
         font-size: 70px;
         padding: 200px 10px 200px 10px;
     }
