@@ -90,7 +90,7 @@ footer p {
   padding: 10px;
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 300px) {
     section {
         width: 75%;
     }
