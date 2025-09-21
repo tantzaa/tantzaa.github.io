@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+  min-height: 100vh;
+}
+
+main {
+  height: 100vh;
+}
+
+/* Navigaatiopalkki */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Header */
+header {
+  background-image: url('./kuvat/Kahvi.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(37, 34, 34);
+  
+}
+
+header h1 {
+  font-weight: 700;
+  color: white;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Kortit */
+section .border {
+  transition: transform 0.2s ease-in-out;
+}
+
+section .border:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(177, 165, 165, 0.1);
+}
+
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  background-color: #212529;
+}
+
+/* Napit */
+.btn-outline-primary {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Otsikot */
+h2 {
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.h2-border {
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Responsiivisuus: pienet näytöt */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,91 @@
+/* Yleiset tyylit */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigaatio */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+
+/* Otsikot */
+h1,
+h3,
+h5 {
+  color: #343a40;
+  font-weight: 600;
+}
+
+/* Tekstisisältö */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Kuvat */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Ruudukot */
+.container .row {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.text-muted {
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Arvot - kortit */
+.row .col-md-4 .border {
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease;
+}
+
+.row .col-md-4 .border:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  background-color: #343a40;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .container .row {
+    padding: 1rem;
+  }
+
+  .col-md-6 img {
+    margin-bottom: 1rem;
+  }
+}
