@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>JSON</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JSON</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Etusivu (Tehtävä 1 OSA I)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="toteutus.html">Tehtävä 1 OSA II</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="poke.html">Poke haku (Tehtävä 2 OSA I ja II)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="saa.html">Tehtävä 3</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div id="vastaus"></div>
+
+    <script>
+        fetch('./tietue.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (responseJson) {
+                kerro(responseJson);
+            })
+            .catch(function (error) {
+                document.getElementById("vastaus").innerHTML = "Virhe ladattaessa tietoja: " + error;
+            });
+
+        function kerro(obj) {
+            let tiedot = "<h1>" + obj.otsikko + "</h1><br>" + obj.kuvaus + "<br><hr>"
+                + "<p><img src='" + obj.kuva + "'></p>"
+                + "<h3>Opintojakso</h3>"
+                + "Nimi: " + obj.opintojakso.nimi + "<br>"
+                + "Tunnus: " + obj.opintojakso.tunnus + "<br>"
+                + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>";
+
+            tiedot += "<p><h3> Aiheet </h3>";
+                for (let i = 0; i < obj.tekniikat.length; i++){
+                    tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
+                    tiedot += "<a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+                    tiedot += "</p>";
+
+                }
+
+            document.getElementById("vastaus").innerHTML = tiedot;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

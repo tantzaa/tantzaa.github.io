@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>JSON</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JSON</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Etusivu (Tehtävä 1 OSA I)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="toteutus.html">Tehtävä 1 OSA II</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="poke.html">Poke haku (Tehtävä 2 OSA I ja II)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="saa.html">Tehtävä 3</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <h1>Pokemon haku</h1>
+    <p>
+        
+        <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+        <button onclick="poke()">Hae</button><br>
+        <button onclick="kaanna()" style="margin-top: 20px;">Käännä</button>
+
+
+    <div id="nimi">Kirjoita laatikkoon Pokemonin nimi</div>
+    <p id="kuva2"></p>
+    <div id="vastaus"></div>
+    </p>
+
+    <script>
+        let viimeisinPokemon = null;
+
+        function poke() {
+            const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+            let name = document.getElementById("pokemonName").value;
+
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error("Pokémonia ei löytynyt");
+                    }
+                    return response.json();
+                })
+                .then(function (responseJson) {
+                    viimeisinPokemon = responseJson;
+                    naytaPokemonTiedot(responseJson.sprites.front_default, responseJson);
+                })
+                .catch(function (error) {
+                    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+                    document.getElementById("kuva2").innerHTML = "";
+                    document.getElementById("nimi").innerHTML = "";
+                    viimeisinPokemon = null;
+                });
+
+            document.getElementById("pokemonName").value = "";
+        }
+
+        function kaanna() {
+            if (viimeisinPokemon && viimeisinPokemon.sprites.back_default) {
+                naytaPokemonTiedot(viimeisinPokemon.sprites.back_default, viimeisinPokemon, true);
+            } else {
+                document.getElementById("kuva2").innerHTML = "<p>Selkäpuolen kuvaa ei saatavilla.</p>";
+            }
+        }
+
+        function naytaPokemonTiedot(kuvaUrl, data, kaannetty = false) {
+            const nimi = kaannetty ? data.name + " (selkä)" : data.name;
+            const pituus = data.height / 10; // desimetrit → metrit
+            const paino = data.weight / 10; // dekagrammat → kilot
+            const taidot = data.abilities.map(function (abilityObj) {
+                return abilityObj.ability.name;
+            }).join(", ");
+
+            document.getElementById("kuva2").innerHTML = "<img src='" + kuvaUrl + "' alt='Pokémon'>";
+            document.getElementById("nimi").innerHTML = "<b>" + nimi + "</b>";
+            document.getElementById("vastaus").innerHTML =
+                `<p><b>Pituus:</b> ${pituus} m</p>
+             <p><b>Paino:</b> ${paino} kg</p>
+             <p><b>Taidot:</b> ${taidot}</p>`;
+        }
+    </script>
+
+
+</body>
+
+</html>

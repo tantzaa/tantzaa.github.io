@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #cfcbeb;
+  color: #333;
+  min-height: 100vh;
+  margin: 2em auto;
+  border-radius: 10px;
+  padding-left: 2em;
+  border-radius: 10px;
+}
+}
+
+main {
+  height: 100vh;
+}
+
+/* Navigaatiopalkki */
+.navbar {
+  box-shadow: 0 2px 4px rgba(238, 118, 118, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Header */
+header {
+  background-size: cover;
+  background-position: center;
+  color: rgb(37, 34, 34);
+  background-color: aquamarine;
+
+}
+
+header h1 {
+  font-weight: 700;
+  color: rgb(211, 196, 196);
+
+}
+
+header p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Kortit */
+section .border {
+  transition: transform 0.2s ease-in-out;
+}
+
+section .border:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(158, 144, 144, 0.1);
+}
+
+
+/* Napit */
+.btn-outline-primary {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+
+/* Otsikot */
+
+h1 {
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.h2-border {
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Responsiivisuus: pienet näytöt */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .kaanna-btn {
+    margin-top: 20px;
+  }
+
+}
