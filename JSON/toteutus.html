@@ -64,19 +64,20 @@
         //Tietojen kokoaminen
         function kerro(obj) {
             let tiedot = `
-            <div class="card shadow">
-                <div class="card-body">
-                    <h5 class="card-title">${obj.opintojakso}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">${obj.oppilaita}</h6>
-                    <p class="card-text"> ${obj.nimet}</p>
-                    <p class="card-text">${obj.ajankohta}</p>
-                    <p class="card-text"> ${obj.kesto}</p>
-                    <img src="${obj.kuva}" alt="Kuva" style="width: 40%; margin-top: 1rem;">
+        <div class="card shadow" style="width: 300px; padding-right: 10px;">
+            <div class="card-body">
+                <h5 class="card-title">${obj.opintojakso}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${obj.oppilaita}</h6>
+                <p class="card-text">${obj.nimet}</p>
+                <p class="card-text">${obj.ajankohta}</p>
+                <p class="card-text">${obj.kesto}</p>
+                <img src="${obj.kuva}" alt="Kuva" style="width: 100%; margin-top: 1rem;">
             </div>
-        `;
-
+        </div>
+    `;
             document.getElementById("vastaus").innerHTML = tiedot;
         }
+
     </script>
 
 </body>
