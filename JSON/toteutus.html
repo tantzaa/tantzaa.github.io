@@ -10,6 +10,7 @@
     <title>JSON</title>
 </head>
 
+<!--Navigaatio-->
 <body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -47,6 +48,7 @@
     </div>
 
     <script>
+        //Tietojen haku JSON:in avulla toteutus.jsonilta
         fetch('./toteutus.json')
             .then(function (response) {
                 return response.json();
@@ -58,6 +60,7 @@
                 document.getElementById("vastaus").innerHTML = "Virhe ladattaessa tietoja: " + error;
             });
 
+            //Tietojen kokoaminen
         function kerro(obj) {
             let tiedot = `
             <div class="card shadow">

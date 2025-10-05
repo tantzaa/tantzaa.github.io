@@ -10,6 +10,7 @@
     <title>JSON</title>
 </head>
 
+<!--Navigaatio-->
 <body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -40,7 +41,7 @@
         </div>
     </nav>
 
-
+    <!-- Painikkeet -->
     <h1>Pokemon haku</h1>
     <p>
         
@@ -55,6 +56,8 @@
     </p>
 
     <script>
+
+        //Pokemonien haku JSON:in avulla
         let viimeisinPokemon = null;
 
         function poke() {
@@ -82,6 +85,7 @@
             document.getElementById("pokemonName").value = "";
         }
 
+        //Pokemonin kääntäminen
         function kaanna() {
             if (viimeisinPokemon && viimeisinPokemon.sprites.back_default) {
                 naytaPokemonTiedot(viimeisinPokemon.sprites.back_default, viimeisinPokemon, true);
@@ -90,6 +94,7 @@
             }
         }
 
+        //Pokemonin tiedot(pituus,paino ja taidot)
         function naytaPokemonTiedot(kuvaUrl, data, kaannetty = false) {
             const nimi = kaannetty ? data.name + " (selkä)" : data.name;
             const pituus = data.height / 10; // desimetrit → metrit

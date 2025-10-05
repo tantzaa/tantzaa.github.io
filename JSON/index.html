@@ -10,6 +10,8 @@
     <title>JSON</title>
 </head>
 
+<!-- Navigaatio -->
+
 <body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -44,6 +46,8 @@
     <div id="vastaus"></div>
 
     <script>
+
+        //JSON-haku
         fetch('./tietue.json')
             .then(function (response) {
                 return response.json();
@@ -55,6 +59,7 @@
                 document.getElementById("vastaus").innerHTML = "Virhe ladattaessa tietoja: " + error;
             });
 
+        //Opintojakson tiedot
         function kerro(obj) {
             let tiedot = "<h1>" + obj.otsikko + "</h1><br>" + obj.kuvaus + "<br><hr>"
                 + "<p><img src='" + obj.kuva + "' style='width:90%; height:auto;'></p>"
@@ -64,12 +69,12 @@
                 + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>";
 
             tiedot += "<p><h3> Aiheet </h3>";
-                for (let i = 0; i < obj.tekniikat.length; i++){
-                    tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
-                    tiedot += "<a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
-                    tiedot += "</p>";
+            for (let i = 0; i < obj.tekniikat.length; i++) {
+                tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
+                tiedot += "<a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+                tiedot += "</p>";
 
-                }
+            }
 
             document.getElementById("vastaus").innerHTML = tiedot;
         }
