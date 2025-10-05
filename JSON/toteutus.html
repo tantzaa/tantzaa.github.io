@@ -11,6 +11,7 @@
 </head>
 
 <!--Navigaatio-->
+
 <body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -60,7 +61,7 @@
                 document.getElementById("vastaus").innerHTML = "Virhe ladattaessa tietoja: " + error;
             });
 
-            //Tietojen kokoaminen
+        //Tietojen kokoaminen
         function kerro(obj) {
             let tiedot = `
             <div class="card shadow">
@@ -70,7 +71,7 @@
                     <p class="card-text"> ${obj.nimet}</p>
                     <p class="card-text">${obj.ajankohta}</p>
                     <p class="card-text"> ${obj.kesto}</p>
-                    <img src="${obj.kuva}" class="card-img-top" alt="Kuva">
+                    <img src="${obj.kuva}" class="card-img-top" alt="Kuva" style="width: 50%; display: block; margin: 0 auto; padding-bottom: 1rem;">
                 </div>
             </div>
         `;
