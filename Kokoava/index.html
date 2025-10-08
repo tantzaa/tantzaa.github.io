@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Herkkulan VPK</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <!-- Otsikko -->
+  <div class="position-relative text-white text-center"
+    style="background-image: url('./palo.jpg'); background-size: cover; background-position: center; height: 300px;">
+
+    <!-- Overlay himmennys -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+    <!-- Teksti sisältö -->
+    <div class="position-relative p-5">
+      <h1>Herkkulan VPK</h1>
+      <p><b>Herkkulan vapaapalokunnan toiminta</b></p>
+    </div>
+
+  </div>
+
+  <!-- Navigaatio -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Herkkulan VPK</a>
+
+      <!-- Hampurilaispainike -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Valikon avaaminen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigaatio-osio -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#meista">Meistä</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#koulutukset">Tulevat koulutukset</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kalusto">Kalusto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">Usein kysytyt kysymykset</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#liity">Liity mukaan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#saa">Sään vaikutus koulutuksiin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Meistä-osio-->
+
+  <div id="meista" class="container-fluid mt-5 px-4">
+    <div class="row">
+      <div class="col-12">
+        <h2>Meistä</h2>
+        <p>Herkkulan VPK on vapaaehtoinen palokunta, joka tarjoaa vapaaehtoisuuteen perustuvaa pelastustoimintaa ja
+          koulutusta yhteisölleen.</p>
+
+        <p>Toimintaamme kuuluu muun muassa sammutustehtäviin osallistuminen ja turvallisuusviestintä alueen
+          asukkaille.
+          <br> Koulutamme aktiivisesti uusia jäseniä ja ylläpidämme valmiuttamme
+          säännöllisillä harjoituksilla ja yhteistoiminnalla muiden viranomaisten kanssa.
+        </p>
+
+        <img src="./paloauto.jpg" alt="Herkkulan VPK toiminnassa" class="img-fluid rounded mb-3 w-75" />
+      </div>
+    </div>
+  </div>
+
+
+  <hr class="d-sm-none">
+  <!--Tulevat koulutukset-->
+  <div id="koulutukset" class="container mt-4">
+
+    <h2>Tulevat koulutukset</h2>
+
+    <div class="card mb-3 shadow-sm w-100">
+      <div class="card-body">
+        <h5 class="card-title">Sammutustekniikat</h5>
+        <h6 class="card-subtitle mb-2 text-muted">10.11.2025</h6>
+        <p class="card-text">Koulutus kattaa sammutustekniikat ja pelastustekniikat.</p>
+      </div>
+    </div>
+
+    <div class="card mb-3 shadow-sm w-100">
+      <div class="card-body">
+        <h5 class="card-title">Sammutustekniikat kotioloissa</h5>
+        <h6 class="card-subtitle mb-2 text-muted">24.11.2025</h6>
+        <p class="card-text">Harjoitus parantaa toimintavalmiutta siviileille tulipalon sattuessa kotona.</p>
+      </div>
+    </div>
+
+    <div class="card mb-3 shadow-sm w-100">
+      <div class="card-body">
+        <h5 class="card-title">Ensiapukurssi</h5>
+        <h6 class="card-subtitle mb-2 text-muted">05.12.2025</h6>
+        <p class="card-text">Kattava ensiapukurssi, joka sisältää elvytyksen ja hätäensiaputaidot.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Kuvakaruselli kaluston ja henkilöstön kuvista-->
+  <div id="kalustoCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+
+
+    <!-- Indikaattorit (pallot) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#kalustoCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#kalustoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#kalustoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#kalustoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#kalustoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+
+    <!-- Karusellin kuvat -->
+    <div class="carousel-inner rounded">
+      <div class="carousel-item active">
+        <img src="./yhdessa.jpg" class="d-block w-100" alt="Kalusto kuva 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="./asu.jpg" class="d-block w-100" alt="Kalusto kuva 2" />
+      </div>
+      <div class="carousel-item">
+        <img src="./asu2.jpg" class="d-block w-100" alt="Kalusto kuva 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="./sammuttaa.jpg" class="d-block w-100" alt="Kalusto kuva 4" />
+      </div>
+      <div class="carousel-item">
+        <img src="./sammutus.jpg" class="d-block w-100" alt="Kalusto kuva 5" />
+      </div>
+    </div>
+
+    <!-- Navigointipainikkeet -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#kalustoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Edellinen</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#kalustoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Seuraava</span>
+    </button>
+  </div>
+
+  <!-- Accordion FAQ -->
+  <div id="faq" class="container my-5">
+    <h2 class="mb-4 text-center">Usein kysytyt kysymykset</h2>
+    <div class="accordion" id="faqAccordion">
+
+      <!-- Kysymys 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne"
+            aria-expanded="true" aria-controls="faqCollapseOne">
+            Mitä Herkkulan VPK tekee?
+          </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Herkkulan VPK on vapaaehtoinen palokunta, joka tarjoaa vapaaehtoisten pelastuspalveluja, osallistuu
+            onnettomuuksien
+            torjuntaan sekä järjestää paloturvallisuuskoulutusta ja harjoituksia siviileille.
+          </div>
+        </div>
+      </div>
+
+      <!-- Kysymys 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+            Voinko liittyä mukaan toimintaan?
+          </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Kyllä! Etsimme jatkuvasti uusia vapaaehtoisia eri tehtäviin. Ota yhteyttä tai tule tutustumaan
+            harjoituksiin
+            paikan päälle.
+          </div>
+        </div>
+      </div>
+
+      <!-- Kysymys 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+            Tarvitseeko olla hyvässä kunnossa?
+          </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Fyysinen kunto on hyödyksi sammutus- ja pelastustehtävissä, mutta VPK:ssa on myös monia muita rooleja,
+            joissa fyysinen kunto ei ole ratkaisevaa.
+          </div>
+        </div>
+      </div>
+
+      <!-- Kysymys 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+            Missä ja milloin harjoituksia pidetään?
+          </button>
+        </h2>
+        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Harjoitukset pidetään Herkkulan paloasemalla viikoittain, yleensä torstai-iltaisin klo 18. Tervetuloa
+            mukaan
+            seuraamaan tai osallistumaan!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Liity mukaan -osio -->
+  <div id="liity" class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-4">
+          <h2>Liity mukaan Herkkulan VPK:hon</h2>
+          <p>Kiinnostaako vapaaehtoistoiminta? Täytä lomake, niin otamme sinuun yhteyttä!</p>
+        </div>
+
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nimi</label>
+            <input type="text" class="form-control" id="name" placeholder="Etunimi Sukunimi" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Sähköposti</label>
+            <input type="email" class="form-control" id="email" placeholder="esimerkki@domain.fi" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Viesti</label>
+            <textarea class="form-control" id="message" rows="4"
+              placeholder="Kerro hieman itsestäsi tai miksi haluat liittyä mukaan."></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Lähetä hakemus</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Säätiedot koulutuksia varten-->
+  <div id="saa" class="container my-5">
+    <div class="p-4 bg-light rounded shadow-sm">
+      <h2 class="mb-3">Sään vaikutus koulutuksiin</h2>
+      <p>Jos sääolosuhteet ovat erittäin huonot, koulutukset voidaan joutua siirtämään sisätiloihin tai perumaan
+        turvallisuussyistä.</p>
+    </div>
+  </div>
+
+
+  <!-- Sääosio -->
+  <div class="container my-5">
+    <div id="vastaus"></div>
+  </div>
+
+  <script>
+    //Säätietojen haku JSON:in avulla
+    function haeSaatiedot() {
+      fetch("https://api.openweathermap.org/data/2.5/weather?q=Espoo,FI&appid=665ecd56dfc08dbb50feb8b8f5034e28&lang=fi&units=metric")
+
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (json) {
+          listaaSaatiedot(json);
+        })
+        .catch(function (error) {
+          document.getElementById("vastaus").innerHTML = "Tietoja ei voitu hakea";
+          console.error("Virhe:", error);
+        });
+    }
+
+    function listaaSaatiedot(saatiedot) {
+      // Haetaan säätiedot
+      let kuvaus = saatiedot.weather[0].description;
+      let lampotila = saatiedot.main.temp;
+      let tuuli = saatiedot.wind.speed;
+      let ikoni = saatiedot.weather[0].icon;
+      let ikoniUrl = "https://openweathermap.org/img/wn/" + ikoni + "@2x.png";
+
+      // Haetaan nykyinen kellonaika
+      let nyt = new Date();
+      let tunnit = nyt.getHours().toString().padStart(2, "0");
+      let minuutit = nyt.getMinutes().toString().padStart(2, "0");
+      let aika = tunnit + "." + minuutit;
+
+      // Rakennetaan HTML-sisältö
+      let teksti = "<h5>Sää Espoossa</h5>";
+      teksti += "Sää kello " + aika;
+      teksti += "<p><strong>Säätila:</strong> " + kuvaus + "</p>";
+      teksti += "<p><strong>Lämpötila:</strong> " + lampotila + " °C</p>";
+      teksti += "<p><strong>Tuuli:</strong> " + tuuli + " m/s</p>";
+      teksti += "<img src='" + ikoniUrl + "' alt='Sääkuvake' style='filter: none; opacity: 1; width: 100px; height: 100px;'>";
+
+      // Näytetään sisältö sivulla
+      document.getElementById("vastaus").innerHTML = teksti;
+    }
+
+    haeSaatiedot();
+  </script>
+
+  <!--Footer-->
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>&copy; 2025 Herkkulan VPK – Turvallisuutta sydämellä</p>
+    <p>Yhteystiedot: herkkulanvpk@example.com | Puh. 040 123 4567</p>
+  </div>
+
+
+</body>
+
+</html>
